@@ -216,7 +216,7 @@ module Bundler
       Bundler.settings[:bin]    = opts["binstubs"] if opts[:binstubs]
       Bundler.settings[:shebang] = opts["shebang"] if opts[:shebang]
       Bundler.settings[:no_prune] = true if opts["no-prune"]
-      Bundler.settings[:disable_shared_gems] = Bundler.settings[:path] ? '1' : nil
+      # Bundler.settings[:disable_shared_gems] = Bundler.settings[:path] ? '1' : nil
       Bundler.settings.without = opts[:without]
       Bundler.ui.be_quiet! if opts[:quiet]
       Bundler.settings[:clean] = opts[:clean] if opts[:clean]
